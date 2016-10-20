@@ -10,6 +10,7 @@ const {
   Learn,
   Cats,
   Moviedb,
+  Movie,
   Spotify,
   Youtube
 } = require('./components')
@@ -29,6 +30,10 @@ module.exports = _ =>
     h(Route, {
       path: '/moviedb',
       component: Moviedb
+    }),
+    h(Route, {
+      path: '/moviedb/:imdb',
+      component: Movie
     }),
     h(Route, {
       path: '/spotify',
